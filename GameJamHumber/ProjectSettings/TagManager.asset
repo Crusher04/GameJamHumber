@@ -50,6 +50,9 @@ TagManager:
   - name: Background Layered
     uniqueID: 908382175
     locked: 0
+  - name: Background Layered +
+    uniqueID: 2496374771
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
