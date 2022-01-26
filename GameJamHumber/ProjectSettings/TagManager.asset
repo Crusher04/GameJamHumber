@@ -38,18 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-<<<<<<< Updated upstream
-=======
-  - name: Skybox
-    uniqueID: 2687082469
-    locked: 0
-  - name: Skybox 2
-    uniqueID: 1224463065
-    locked: 0
-  - name: Background
-    uniqueID: 1043013261
-    locked: 0
->>>>>>> Stashed changes
   - name: Default
     uniqueID: 0
     locked: 0
