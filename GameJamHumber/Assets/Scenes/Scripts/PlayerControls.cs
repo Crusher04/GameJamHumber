@@ -16,6 +16,7 @@ public class PlayerControls : MonoBehaviour
     public float dashCooldown = 1f;
     private float dashCounter;
     private float dashCoolCounter;
+    private bool FacingRight = true;
 
     private void Awake()
     {
@@ -36,39 +37,15 @@ public class PlayerControls : MonoBehaviour
     }
     public void dash()
     {
-        if (dashCoolCounter <= 0 && dashCounter <= 0)
-        {
-            activeSpeed = dashSpeed;
-            dashCounter = dashDistance;
-            Physics2D.IgnoreLayerCollision(3, 7, true);
-        }
-
-    }
-    public void jump()
-    {
-        if (isGround())
-        {
-            rb.AddForce(new Vector2(0, jumpspeed), ForceMode2D.Impulse);
-            
-        }
-    }
-
-    private bool isGround()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, Ground);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        move = playerControl.Player.Move.ReadValue<Vector2>();
-        if (playerControl.Player.Jump.triggered)
-        {
-            jump();
-        }
+        
         if (playerControl.Player.Dash.triggered)
         {
-            dash();
+            if (dashCoolCounter <= 0 && dashCounter <= 0)
+            {
+                activeSpeed = dashSpeed;
+                dashCounter = dashDistance;
+                Physics2D.IgnoreLayerCollision(3, 7, true);
+            }
         }
         if (dashCounter > 0)
         {
@@ -85,12 +62,51 @@ public class PlayerControls : MonoBehaviour
         {
             dashCoolCounter -= Time.deltaTime;
         }
-       
+
+    }
+    public void jump()
+    {
+        if (isGround())
+        {
+            rb.AddForce(new Vector2(0, jumpspeed), ForceMode2D.Impulse);
+            
+        }
+    }
+
+    private bool isGround()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 1.6f, Ground);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        move = playerControl.Player.Move.ReadValue<Vector2>();
+        if (playerControl.Player.Jump.triggered)
+        {
+            jump();
+        }
+        dash();
     }
    
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(move.x * speed * activeSpeed, rb.velocity.y);
-        
+        if(move.x < 0 && FacingRight)
+        {
+            Flip();
+        }
+        if (move.x > 0 && !FacingRight)
+        {
+            Flip();
+        }
+    }
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        FacingRight = !FacingRight;
     }
 }
