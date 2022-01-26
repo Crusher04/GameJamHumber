@@ -4345,6 +4345,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4360,6 +4361,21 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 176579408e58f3d4794cb2462e9e20a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followObject: {fileID: 0}
+  followOffset: {x: 3, y: 0}
+  speed: 3
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -4411,7 +4427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.75, y: 1.45, z: -10}
+  m_LocalPosition: {x: 1.24, y: 1.45, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -36828,6 +36844,7 @@ GameObject:
   - component: {fileID: 1764150144}
   - component: {fileID: 1764150146}
   - component: {fileID: 1764150147}
+  - component: {fileID: 1764150148}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -36894,8 +36911,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764150143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.717, y: -2.0258, z: 0}
-  m_LocalScale: {x: 1.4057899, y: 2.6488993, z: 1}
+  m_LocalPosition: {x: -3.264, y: -2.387, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -36947,6 +36964,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1764150148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764150143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2956fa758ac6c41b479b05757920c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1776540141
 GameObject:
   m_ObjectHideFlags: 0
@@ -38634,6 +38664,8 @@ GameObject:
   - component: {fileID: 1941730376}
   - component: {fileID: 1941730375}
   - component: {fileID: 1941730377}
+  - component: {fileID: 1941730379}
+  - component: {fileID: 1941730378}
   m_Layer: 0
   m_Name: Pitchfork Vil. (1)
   m_TagString: Untagged
@@ -38700,8 +38732,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941730374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.827502, y: -9.644967, z: 0}
-  m_LocalScale: {x: 0.9968892, y: 0.9459548, z: 1}
+  m_LocalPosition: {x: 2.342, y: -9.72, z: 0}
+  m_LocalScale: {x: 0.65, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 1644839520}
   m_RootOrder: 0
@@ -38732,6 +38764,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16440603, y: 0.41474926}
   m_EdgeRadius: 0
+--- !u!114 &1941730378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941730374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f41db87d37543a4781234ad7e857c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1764150145}
+  range: 4
+  hSpeed: 5
+--- !u!50 &1941730379
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941730374}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1967750900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3226521009676847262, guid: c13263f1f05170f4e849875cee5c46d0, type: 3}
