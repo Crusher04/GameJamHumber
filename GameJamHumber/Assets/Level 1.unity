@@ -517,8 +517,9 @@ GameObject:
   - component: {fileID: 34049131}
   - component: {fileID: 34049130}
   - component: {fileID: 34049129}
+  - component: {fileID: 34049132}
   m_Layer: 0
-  m_Name: Ground Collision
+  m_Name: Death Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,7 +546,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34049127}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -690,6 +691,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &34049132
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34049127}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 369.6855, y: -9.206042}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 21.322876, y: 1.103178}
+  m_EdgeRadius: 0
 --- !u!1 &43993965
 GameObject:
   m_ObjectHideFlags: 0
@@ -36211,9 +36238,13 @@ EdgeCollider2D:
   - {x: 224.03728, y: -12.007897}
   - {x: 230.96913, y: -12.072571}
   - {x: 238.00935, y: -11.964462}
-  - {x: 239.0461, y: -11.034533}
-  - {x: 245.01976, y: -11.037338}
-  - {x: 245.5837, y: -11.710342}
+  - {x: 238.3087, y: -11.833441}
+  - {x: 238.78108, y: -11.496853}
+  - {x: 238.99788, y: -11.142529}
+  - {x: 239.0696, y: -11.034031}
+  - {x: 243.9431, y: -10.999338}
+  - {x: 244.77138, y: -11.510739}
+  - {x: 245.5457, y: -11.938342}
   - {x: 246.07137, y: -12.038823}
   - {x: 246.57463, y: -12.422369}
   - {x: 247.04536, y: -12.908501}
@@ -36236,8 +36267,8 @@ EdgeCollider2D:
   - {x: 255.58269, y: -18.713642}
   - {x: 255.98543, y: -19.020803}
   - {x: 256.97992, y: -18.94758}
-  - {x: 257.58508, y: -26.447634}
-  - {x: 278.43286, y: -25.151745}
+  - {x: 256.94354, y: -24.889668}
+  - {x: 278.0357, y: -24.907358}
   - {x: 278.03357, y: -18.958439}
   - {x: 278.9452, y: -19.008078}
   - {x: 279.80084, y: -18.507425}
