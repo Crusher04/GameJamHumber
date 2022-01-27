@@ -4,8 +4,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D body;
-    private Animator anim;
+    public Animator anim;
     private bool grounded;
+    private bool FacingRight = false;
 
     private void Awake()
     {
@@ -22,6 +23,18 @@ public class PlayerMovement : MonoBehaviour
             jump();
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", grounded);
+
+        //Flip sprite to face player
+        if (body.velocity.x > 0 && FacingRight)
+        {
+
+            Flip();
+        }
+
+        if (body.velocity.x < 0 && !FacingRight)
+        {
+            Flip();
+        }
     }
 
     private void jump()
@@ -35,4 +48,14 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "ground")
             grounded = true;
     }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+        FacingRight = !FacingRight;
+
+    }
+
 }
