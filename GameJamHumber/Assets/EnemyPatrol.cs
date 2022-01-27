@@ -1,75 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    [Header("Patrol Points")]
-    [SerializeField] private Transform leftEdge;
-    [SerializeField] private Transform rightEdge;
+    // Variables
+    [SerializeField] private float spd;
+    [SerializeField] private bool mRight;
+    public float activeChange = 0f;
+    public float directionChange = 0f;
+    private SpriteRenderer _renderer;
 
-    [Header("Enemy")]
-    [SerializeField] private Transform enemy;
-
-    [Header("Movement parameters")]
-    [SerializeField] private float speed;
-    private Vector3 initScale;
-    private bool movingLeft;
-
-    [Header("Idle Behaviour")]
-    [SerializeField] private float idleDuration;
-    private float idleTimer;
-
-    [Header("Enemy Animator")]
-    [SerializeField] private Animator anim;
-
-    private void Awake()
+    private void Start()
     {
-        initScale = enemy.localScale;
-    }
-    private void OnDisable()
-    {
-        anim.SetBool("moving", false);
-    }
-
-    private void Update()
-    {
-        if (movingLeft)
+        _renderer = GetComponent<SpriteRenderer>();
+        if (_renderer == null)
         {
-            if (enemy.position.x >= leftEdge.position.x)
-                MoveInDirection(-1);
-            else
-                DirectionChange();
+            Debug.LogError("Player Sprite is missing a renderer");
         }
+
+        activeChange = directionChange;
+    }
+
+    void Update()
+    {
+        
+
+        // Check if enemy is set to move right, If it is then move right
+        if (mRight)
+        {
+            transform.Translate(2 * Time.deltaTime * spd, 0, 0);
+            //transform.localScale = new Vector2(-1, 1);
+            _renderer.flipX = false;
+        }
+        // If it is not set to move right, move left
         else
         {
-            if (enemy.position.x <= rightEdge.position.x)
-                MoveInDirection(1);
-            else
-                DirectionChange();
+            transform.Translate(-2 * Time.deltaTime * spd, 0, 0);
+            // transform.localScale = new Vector2(1, 1);
+            _renderer.flipX = true;
+
         }
-    }
 
-    private void DirectionChange()
-    {
-        anim.SetBool("moving", false);
-        idleTimer += Time.deltaTime;
+        activeChange -= Time.deltaTime;
+        if (activeChange < 0)
+        {
+            mRight = !mRight;
+            activeChange = directionChange;
+        }
 
-        if (idleTimer > idleDuration)
-            movingLeft = !movingLeft;
-    }
+    }//End of update
 
-    private void MoveInDirection(int _direction)
-    {
-        idleTimer = 0;
-        anim.SetBool("moving", true);
-
-        //Make enemy face direction
-        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction,
-            initScale.y, initScale.z);
-
-        //Move in that direction
-        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,
-            enemy.position.y, enemy.position.z);
-    }
-}
+}//End of class
