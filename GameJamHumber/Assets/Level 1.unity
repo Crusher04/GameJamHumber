@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 475597}
   - component: {fileID: 475596}
   - component: {fileID: 475595}
+  - component: {fileID: 475598}
   m_Layer: 0
   m_Name: Pitchfork Vil. (2)
   m_TagString: Untagged
@@ -286,7 +287,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &475598
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475591}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &11999903
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +321,7 @@ GameObject:
   - component: {fileID: 11999908}
   - component: {fileID: 11999907}
   - component: {fileID: 11999909}
+  - component: {fileID: 11999910}
   m_Layer: 0
   m_Name: Pitchfork Vil. (3)
   m_TagString: Untagged
@@ -450,7 +471,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &11999910
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11999903}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &15337409
 GameObject:
   m_ObjectHideFlags: 0
@@ -6897,6 +6937,7 @@ GameObject:
   - component: {fileID: 909662787}
   - component: {fileID: 909662786}
   - component: {fileID: 909662788}
+  - component: {fileID: 909662789}
   m_Layer: 0
   m_Name: Pitchfork Vil. (4)
   m_TagString: Untagged
@@ -7046,7 +7087,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &909662789
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909662782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &916168729
 GameObject:
   m_ObjectHideFlags: 0
@@ -12008,6 +12068,7 @@ GameObject:
   - component: {fileID: 1515231561}
   - component: {fileID: 1515231560}
   - component: {fileID: 1515231562}
+  - component: {fileID: 1515231563}
   m_Layer: 0
   m_Name: Pitchfork Vil. (5)
   m_TagString: Untagged
@@ -12157,7 +12218,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &1515231563
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515231556}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1517670327
 GameObject:
   m_ObjectHideFlags: 0
@@ -12453,6 +12533,7 @@ GameObject:
   - component: {fileID: 1531162673}
   - component: {fileID: 1531162672}
   - component: {fileID: 1531162674}
+  - component: {fileID: 1531162675}
   m_Layer: 0
   m_Name: Pitchfork Vil. (6)
   m_TagString: Untagged
@@ -12602,7 +12683,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &1531162675
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531162668}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1534862064
 GameObject:
   m_ObjectHideFlags: 0
@@ -12886,6 +12986,7 @@ GameObject:
   - component: {fileID: 1554900681}
   - component: {fileID: 1554900680}
   - component: {fileID: 1554900682}
+  - component: {fileID: 1554900683}
   m_Layer: 0
   m_Name: Pitchfork Vil. (7)
   m_TagString: Untagged
@@ -13035,7 +13136,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &1554900683
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554900676}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1559048344
 GameObject:
   m_ObjectHideFlags: 0
@@ -37595,6 +37715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
+  anim: {fileID: 1764150149}
 --- !u!95 &1764150149
 Animator:
   serializedVersion: 3
@@ -37605,7 +37726,7 @@ Animator:
   m_GameObject: {fileID: 1764150143}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ac2f5b851fb37164e85e00082d742563, type: 2}
+  m_Controller: {fileID: 9100000, guid: 904bc0c0887d03842a31805a0f75793e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -37875,6 +37996,7 @@ GameObject:
   - component: {fileID: 1814899043}
   - component: {fileID: 1814899042}
   - component: {fileID: 1814899044}
+  - component: {fileID: 1814899045}
   m_Layer: 0
   m_Name: Pitchfork Vil. (8)
   m_TagString: Untagged
@@ -38024,7 +38146,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &1814899045
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814899038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1816098213
 GameObject:
   m_ObjectHideFlags: 0
@@ -38613,6 +38754,7 @@ GameObject:
   - component: {fileID: 1870735514}
   - component: {fileID: 1870735513}
   - component: {fileID: 1870735515}
+  - component: {fileID: 1870735516}
   m_Layer: 0
   m_Name: Pitchfork Vil. (9)
   m_TagString: Untagged
@@ -38762,7 +38904,26 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!95 &1870735516
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870735509}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1880703570
 GameObject:
   m_ObjectHideFlags: 0
@@ -39048,6 +39209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1911700916}
   - component: {fileID: 1911700915}
+  - component: {fileID: 1911700917}
   m_Layer: 0
   m_Name: Main Female
   m_TagString: Untagged
@@ -39120,6 +39282,25 @@ Transform:
   m_Father: {fileID: 79799167}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1911700917
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911700914}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f13a5f5dc13af38478419310263b4832, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1927126607
 GameObject:
   m_ObjectHideFlags: 0
@@ -39414,6 +39595,7 @@ GameObject:
   - component: {fileID: 1941730379}
   - component: {fileID: 1941730378}
   - component: {fileID: 1941730380}
+  - component: {fileID: 1941730381}
   m_Layer: 0
   m_Name: Pitchfork Vil. (1)
   m_TagString: Untagged
@@ -39564,6 +39746,25 @@ MonoBehaviour:
   mRight: 0
   activeChange: 0
   directionChange: 1
+--- !u!95 &1941730381
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941730374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1967750900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3226521009676847262, guid: c13263f1f05170f4e849875cee5c46d0, type: 3}
