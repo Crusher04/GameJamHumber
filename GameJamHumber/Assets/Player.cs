@@ -2,13 +2,24 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    //Variables
     [SerializeField] private float speed;
     private Rigidbody2D body;
     public Animator anim;
     private bool grounded;
     private bool FacingRight = false;
 
-    private void Awake()
+    //Attack Variables
+    private bool attack = false;
+    private float timeBtwAttack;
+    private float startTimeBtwAttack;
+    public Transform attackPos;
+    public float attackRange;
+    public LayerMask whatIsEnemies;
+    public int damage; 
+
+    private void Start()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -16,11 +27,14 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        //Movement Code
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
+        //Jump Code
         if (Input.GetKey(KeyCode.Space) && grounded)
             jump();
+
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", grounded);
 
@@ -35,8 +49,43 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
+
+
+        //Attack Code
+        if(timeBtwAttack <= 0)
+        {
+            //Attack enemy
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                for(int i = 0; i < enemiesToDamage.Length; i++)
+                {
+                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                }
+            }
+
+            timeBtwAttack = startTimeBtwAttack;
+        }
+        else
+        {
+            timeBtwAttack -= Time.deltaTime;
+        }
+    }//End of update
+
+    private void FixedUpdate()
+    {
+        handleAttacks();
     }
 
+    private void handleAttacks()
+    {
+        if(attack)
+        {
+            anim.SetTrigger("attack");
+        }
+    }
+
+    //Controls jumping for player
     private void jump()
     {
         body.velocity = new Vector2(body.velocity.x, speed + 2f);
@@ -56,6 +105,12 @@ public class Player : MonoBehaviour
         gameObject.transform.localScale = currentScale;
         FacingRight = !FacingRight;
 
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 
 }

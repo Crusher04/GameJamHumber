@@ -40,9 +40,6 @@ public class EnemyTracking : MonoBehaviour
     // Function for the enemy to track the player based on player position
     void Track()
     {
-        //Variables 
-     
-
         // If Player is to the right of the enemy, move right towards the Player
         if (transform.position.x < Player.position.x)
         {
