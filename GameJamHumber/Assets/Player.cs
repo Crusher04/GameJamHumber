@@ -57,6 +57,7 @@ public class Player : MonoBehaviour
             //Attack enemy
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                anim.SetTrigger("attack");
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for(int i = 0; i < enemiesToDamage.Length; i++)
                 {
@@ -71,19 +72,6 @@ public class Player : MonoBehaviour
             timeBtwAttack -= Time.deltaTime;
         }
     }//End of update
-
-    private void FixedUpdate()
-    {
-        handleAttacks();
-    }
-
-    private void handleAttacks()
-    {
-        if(attack)
-        {
-            anim.SetTrigger("attack");
-        }
-    }
 
     //Controls jumping for player
     private void jump()
