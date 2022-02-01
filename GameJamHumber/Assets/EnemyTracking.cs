@@ -26,7 +26,7 @@ public class EnemyTracking : MonoBehaviour
         // Distance from Enemy to Player
         float dist = Vector2.Distance(transform.position, Player.position);
         float horizontalInput = Input.GetAxis("Horizontal");
-        anim.SetBool("run", horizontalInput != 0);
+        anim.SetBool("isWalking", horizontalInput != 0);
 
         // If the distance from the Enemy to the player is less than the range distance, execute the function
         if (dist < range)
@@ -36,7 +36,7 @@ public class EnemyTracking : MonoBehaviour
             if (transform.position.x < Player.position.x)
             {
                 body.velocity = new Vector2(hSpeed, 0);
-                anim.Play("walking");
+                //anim.SetBool("isWalking", true);
             }
             // If not then move left towards the Player
             else if (transform.position.x > Player.position.x)

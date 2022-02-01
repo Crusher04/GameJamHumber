@@ -8,6 +8,7 @@ public class EnemyPatrol : MonoBehaviour
     public float activeChange = 0f;
     public float directionChange = 0f;
     private SpriteRenderer _renderer;
+    private Animator anim;
 
     private void Start()
     {
@@ -16,7 +17,8 @@ public class EnemyPatrol : MonoBehaviour
         {
             Debug.LogError("Player Sprite is missing a renderer");
         }
-
+        float horizontalInput = Input.GetAxis("Horizontal");
+        anim.SetBool("isWalking", horizontalInput != 0);
         activeChange = directionChange;
     }
 
