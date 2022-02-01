@@ -258,8 +258,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: -38.891}
-  m_SizeDelta: {x: 127.824, y: 387.7831}
+  m_AnchoredPosition: {x: 266.8105, y: -38.891}
+  m_SizeDelta: {x: 467.445, y: 387.7831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573221343
 MonoBehaviour:
@@ -281,23 +281,31 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'NAME
+  m_text: '
 
-    NAME
+    Ahmed Hammoud
 
-    NAME
 
-    NAME
 
-    NAME
+    Abayjit Sidhu
 
-    NAME
+    Khac Trien Nguyen
 
-    NAME
+    Kunal
+    Rajeshbhai Vaghani
 
-    NAME
 
-    NAME'
+
+    Marc Anthony Graver
+
+    Nicholas Fragomeni
+
+
+
+    Nickholas
+    Louise
+
+    Therrin Rodrigues-Mendies'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -557,8 +565,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98, y: -38.891}
-  m_SizeDelta: {x: 142.2592, y: 387.7831}
+  m_AnchoredPosition: {x: -264.47815, y: -38.891}
+  m_SizeDelta: {x: 475.2155, y: 387.7831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1188362758
 MonoBehaviour:
@@ -580,19 +588,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ROLE 1
+  m_text: 'Team Lead
 
 
-    ROLE 2
+
+    Programmers
 
 
-    ROLE 3
 
 
-    ROLE 4
+
+    Game & Level Design
 
 
-    ROLE 5'
+
+
+    Music
+    & Sound Effects'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

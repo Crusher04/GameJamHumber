@@ -276,7 +276,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475591}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -320,9 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!1 &10184924
 GameObject:
@@ -559,7 +559,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11999903}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -603,9 +603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!1 &24794205
 GameObject:
@@ -10424,7 +10424,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909662782}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -10468,9 +10468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!1 &911369437
 GameObject:
@@ -17055,7 +17055,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515231556}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -17099,9 +17099,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!1 &1517670327
 GameObject:
@@ -17460,7 +17460,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531162668}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -17504,9 +17504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!1 &1534862064
 GameObject:
@@ -17930,7 +17930,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554900676}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -17974,9 +17974,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!1 &1559048344
 GameObject:
@@ -85498,7 +85498,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814899038}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -85542,9 +85542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!1 &1827662188
 GameObject:
@@ -86437,7 +86437,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870735509}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -86481,9 +86481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!1 &1880703570
 GameObject:
@@ -87156,7 +87156,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.004730776, y: -0.05449429}
@@ -87195,7 +87195,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941730374}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -87255,9 +87255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   anim: {fileID: 0}
-  destroyDelay: 0.7
+  destroyDelay: 0.6
   deathEffect: {fileID: 0}
 --- !u!61 &1941730383
 BoxCollider2D:
@@ -87269,7 +87269,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.004730776, y: -0.05449429}
