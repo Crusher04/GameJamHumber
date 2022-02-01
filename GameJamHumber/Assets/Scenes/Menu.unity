@@ -2237,6 +2237,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 312210914}
     m_Modifications:
     - target: {fileID: 5354436373786123346, guid: 466197a0120be2441aff7261651e300c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cefd2d40ab68e94498fceed86eb553dd, type: 3}
+    - target: {fileID: 5354436373786123346, guid: 466197a0120be2441aff7261651e300c, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 2955587182248213040, guid: 2271a0d8a05d377428d0cdd44c11a7f8, type: 2}
@@ -2866,8 +2870,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -519.91, y: -4.2236}
-  m_SizeDelta: {x: -1184.9572, y: -561.6788}
+  m_AnchoredPosition: {x: -353.66, y: -4.224}
+  m_SizeDelta: {x: -812.9307, y: -561.6788}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099090866
 MonoBehaviour:
@@ -5103,8 +5107,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -542.84, y: -87}
-  m_SizeDelta: {x: -1230.8151, y: -561.6788}
+  m_AnchoredPosition: {x: -380.95, y: -86}
+  m_SizeDelta: {x: -867.498, y: -561.6788}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1586293340
 MonoBehaviour:
@@ -5658,10 +5662,10 @@ RectTransform:
   m_Father: {fileID: 1908375006}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMin: {x: 1, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -10, y: 0}
+  m_AnchoredPosition: {x: -307.64, y: 0}
+  m_SizeDelta: {x: 605.28, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1668371096
 GameObject:
