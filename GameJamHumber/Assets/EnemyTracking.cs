@@ -10,13 +10,14 @@ public class EnemyTracking : MonoBehaviour
     [SerializeField] float hSpeed;
     private Rigidbody2D body;
     private bool FacingRight = false;
+    private Animator anim;
 
     // Get the body component
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         GetComponent<EnemyTracking>().enabled = true;
-        
     }
 
 
@@ -24,48 +25,46 @@ public class EnemyTracking : MonoBehaviour
     {
         // Distance from Enemy to Player
         float dist = Vector2.Distance(transform.position, Player.position);
+        float horizontalInput = Input.GetAxis("Horizontal");
+        anim.SetBool("run", horizontalInput != 0);
 
         // If the distance from the Enemy to the player is less than the range distance, execute the function
         if (dist < range)
         {
+
             //Track player
-            Track();
+            if (transform.position.x < Player.position.x)
+            {
+                body.velocity = new Vector2(hSpeed, 0);
+                anim.Play("walking");
+            }
+            // If not then move left towards the Player
+            else if (transform.position.x > Player.position.x)
+            {
+                body.velocity = new Vector2(-hSpeed, 0);
+                
+            }
+
+            //Flip sprite to face player
+            if (body.velocity.x >= 0.01f && !FacingRight) //body.velocity.x < 0 && FacingRight
+            {
+                Flip();
+            }
+
+            if (body.velocity.x <= 0.01f && FacingRight) //body.velocity.x > 0 && !FacingRight
+            {
+                Flip();
+            };
 
             //Disabling Patrolling..
             GetComponent<EnemyPatrol>().enabled = false;
            
         }
-    }
-
-    // Function for the enemy to track the player based on player position
-    void Track()
-    {
-        // If Player is to the right of the enemy, move right towards the Player
-        if (transform.position.x < Player.position.x)
-        {
-            body.velocity = new Vector2(hSpeed, 0);
-        }
-        // If not then move left towards the Player
         else
         {
-            body.velocity = new Vector2(-hSpeed, 0);
-            
+            //anim.Play("idle");
         }
-
-        //Flip sprite to face player
-        if(body.velocity.x < 0 && FacingRight)
-        {
-            
-            Flip();
-        }
-        
-        if(body.velocity.x > 0 && !FacingRight)
-        {
-            Flip();
-        }
-
-
-    }//End of Track()
+    }
 
 
     void Flip()
