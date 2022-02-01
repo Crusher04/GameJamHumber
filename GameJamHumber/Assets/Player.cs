@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed;
     private Rigidbody2D body;
     public Animator anim;
+
     private bool grounded;
     private bool FacingRight = false;
 
