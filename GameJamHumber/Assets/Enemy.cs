@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     //Variables
     public int health;
     public Animator anim;
-
+    public float destroyDelay = .7f;
+    public Animation deathEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,16 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
-            anim.SetTrigger("death");
-            Destroy(gameObject);
+            // anim.SetTrigger("Death");
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            destroyDelay -= Time.deltaTime;
+            GetComponent<EnemyTracking>().enabled = false;
+            
+            if (destroyDelay <= 0)
+            {
+                Debug.Log("DestroyTime = " + destroyDelay);
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -31,4 +40,14 @@ public class Enemy : MonoBehaviour
         Debug.Log("DAMAGE TAKEN, Health left = " + health);
     }
 
+    public void Death()
+    { 
+        Destroy(this);
+        destroyDelay -= Time.deltaTime*2;
+        if (destroyDelay <= 0)
+        {
+            Debug.Log("DestroyTime = " + destroyDelay);
+            Destroy(gameObject);
+        }
+    }
 }//End of class
