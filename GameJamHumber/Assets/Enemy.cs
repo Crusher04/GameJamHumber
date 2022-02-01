@@ -10,10 +10,15 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public float destroyDelay = .7f;
     public Animation deathEffect;
+    public Transform Player;
+    private Rigidbody2D body;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        anim.SetBool("Attack", false);
+        body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,7 +29,7 @@ public class Enemy : MonoBehaviour
             anim.SetTrigger("Death");
             destroyDelay -= Time.deltaTime;
             GetComponent<EnemyTracking>().enabled = false;
-            
+
             if (destroyDelay <= 0)
             {
                 Debug.Log("DestroyTime = " + destroyDelay);

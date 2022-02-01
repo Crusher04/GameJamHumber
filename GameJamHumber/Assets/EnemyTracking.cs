@@ -36,7 +36,6 @@ public class EnemyTracking : MonoBehaviour
             if (transform.position.x < Player.position.x)
             {
                 body.velocity = new Vector2(hSpeed, 0);
-                //anim.SetBool("isWalking", true);
             }
             // If not then move left towards the Player
             else if (transform.position.x > Player.position.x)
@@ -59,10 +58,6 @@ public class EnemyTracking : MonoBehaviour
             //Disabling Patrolling..
             GetComponent<EnemyPatrol>().enabled = false;
            
-        }
-        else
-        {
-            //anim.Play("idle");
         }
     }
 
