@@ -299,7 +299,7 @@ Animator:
   m_GameObject: {fileID: 475591}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -324,6 +324,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &10184924
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +583,7 @@ Animator:
   m_GameObject: {fileID: 11999903}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -607,6 +608,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &24794205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2526,6 +2528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodTrigger (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
 --- !u!4 &159348286 stripped
@@ -2838,6 +2844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodTrigger (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
 --- !u!4 &190173165 stripped
@@ -2985,6 +2995,10 @@ PrefabInstance:
     - target: {fileID: 5060985311353086610, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
       propertyPath: m_Name
       value: WoodTrigger (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
@@ -3958,6 +3972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodTrigger (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
 --- !u!4 &276987269 stripped
@@ -4296,6 +4314,10 @@ PrefabInstance:
     - target: {fileID: 5060985311353086610, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
       propertyPath: m_Name
       value: WoodTrigger (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
@@ -5584,6 +5606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodTrigger (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
 --- !u!4 &457787089 stripped
@@ -5762,6 +5788,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 572772740}
     m_Modifications:
+    - target: {fileID: -5198816061852290342, guid: 1f0848aaf3b12464b9de7d13782de6b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 49668348855817341, guid: 1f0848aaf3b12464b9de7d13782de6b2, type: 3}
       propertyPath: m_Name
       value: StoneTrigger2
@@ -6071,6 +6101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodTrigger (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
 --- !u!4 &499236348 stripped
@@ -6269,6 +6303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 572772740}
     m_Modifications:
+    - target: {fileID: -5198816061852290342, guid: 1f0848aaf3b12464b9de7d13782de6b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 49668348855817341, guid: 1f0848aaf3b12464b9de7d13782de6b2, type: 3}
       propertyPath: m_Name
       value: StoneTrigger (1)
@@ -9661,6 +9699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTrigger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8919782561151858363, guid: 1f0d3153e3816af4fa3600d4660d19b9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0d3153e3816af4fa3600d4660d19b9, type: 3}
 --- !u!4 &768925620 stripped
@@ -9976,6 +10018,10 @@ PrefabInstance:
     - target: {fileID: 5060985311353086610, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
       propertyPath: m_Name
       value: WoodTrigger (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
@@ -11239,7 +11285,7 @@ Animator:
   m_GameObject: {fileID: 909662782}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11264,6 +11310,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &911369437
 GameObject:
   m_ObjectHideFlags: 0
@@ -12428,6 +12475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodTrigger (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
 --- !u!4 &1027792868 stripped
@@ -12743,6 +12794,10 @@ PrefabInstance:
     - target: {fileID: 5522261645113249820, guid: 1f0d3153e3816af4fa3600d4660d19b9, type: 3}
       propertyPath: m_Name
       value: GrassTrigger2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919782561151858363, guid: 1f0d3153e3816af4fa3600d4660d19b9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0d3153e3816af4fa3600d4660d19b9, type: 3}
@@ -14874,6 +14929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodTrigger (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
 --- !u!4 &1210173349 stripped
@@ -15168,6 +15227,10 @@ PrefabInstance:
     - target: {fileID: 5060985311353086610, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
       propertyPath: m_Name
       value: WoodTrigger (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
@@ -15548,6 +15611,10 @@ PrefabInstance:
     - target: {fileID: 5060985311353086610, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
       propertyPath: m_Name
       value: WoodTrigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
@@ -17232,6 +17299,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 572772740}
     m_Modifications:
+    - target: {fileID: -5198816061852290342, guid: 1f0848aaf3b12464b9de7d13782de6b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 49668348855817341, guid: 1f0848aaf3b12464b9de7d13782de6b2, type: 3}
       propertyPath: m_Name
       value: StoneTrigger3
@@ -18322,7 +18393,7 @@ Animator:
   m_GameObject: {fileID: 1515231556}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -18347,6 +18418,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &1517670327
 GameObject:
   m_ObjectHideFlags: 0
@@ -18727,7 +18799,7 @@ Animator:
   m_GameObject: {fileID: 1531162668}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -18752,6 +18824,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &1534862064
 GameObject:
   m_ObjectHideFlags: 0
@@ -19197,7 +19270,7 @@ Animator:
   m_GameObject: {fileID: 1554900676}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -19222,6 +19295,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &1559048344
 GameObject:
   m_ObjectHideFlags: 0
@@ -20282,6 +20356,10 @@ PrefabInstance:
     - target: {fileID: 5060985311353086610, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
       propertyPath: m_Name
       value: WoodTrigger (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
@@ -85840,6 +85918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodTrigger (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
 --- !u!4 &1705845505 stripped
@@ -86897,7 +86979,7 @@ Animator:
   m_GameObject: {fileID: 1814899038}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -86922,6 +87004,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &1827662188
 GameObject:
   m_ObjectHideFlags: 0
@@ -87390,6 +87473,10 @@ PrefabInstance:
     - target: {fileID: 5522261645113249820, guid: 1f0d3153e3816af4fa3600d4660d19b9, type: 3}
       propertyPath: m_Name
       value: GrassTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919782561151858363, guid: 1f0d3153e3816af4fa3600d4660d19b9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0d3153e3816af4fa3600d4660d19b9, type: 3}
@@ -87902,7 +87989,7 @@ Animator:
   m_GameObject: {fileID: 1870735509}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -87927,6 +88014,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &1880703570
 GameObject:
   m_ObjectHideFlags: 0
@@ -88649,7 +88737,7 @@ Animator:
   m_GameObject: {fileID: 1941730374}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 417e6975a97285249b2a4c30471317fd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99f0639b9d942864986cd6af12317b8b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -88674,6 +88762,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   destroyDelay: 0.6
   deathEffect: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!61 &1941730383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -90112,6 +90201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 572772740}
     m_Modifications:
+    - target: {fileID: -5198816061852290342, guid: 1f0848aaf3b12464b9de7d13782de6b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 49668348855817341, guid: 1f0848aaf3b12464b9de7d13782de6b2, type: 3}
       propertyPath: m_Name
       value: StoneTrigger
@@ -90581,6 +90674,10 @@ PrefabInstance:
     - target: {fileID: 5060985311353086610, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
       propertyPath: m_Name
       value: GrassTrigger3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166809653183300661, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d87342aa3ca31f458f23f94f01d9106, type: 3}
