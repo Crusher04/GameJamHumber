@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
-            anim.Play("death");
+            anim.SetTrigger("death");
             Destroy(gameObject);
         }
     }
