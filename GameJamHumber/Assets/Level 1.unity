@@ -138,7 +138,8 @@ GameObject:
   - component: {fileID: 475596}
   - component: {fileID: 475595}
   - component: {fileID: 475598}
-  m_Layer: 0
+  - component: {fileID: 475599}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,6 +308,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &475599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
 --- !u!1 &10184924
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +419,8 @@ GameObject:
   - component: {fileID: 11999907}
   - component: {fileID: 11999909}
   - component: {fileID: 11999910}
-  m_Layer: 0
+  - component: {fileID: 11999911}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,6 +589,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &11999911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11999903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
 --- !u!1 &24794205
 GameObject:
   m_ObjectHideFlags: 0
@@ -4503,7 +4533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 415191745}
   - component: {fileID: 415191746}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch Vil. 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4667,7 +4697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429704177}
   - component: {fileID: 429704178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch Vil. 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5515,7 +5545,7 @@ GameObject:
   - component: {fileID: 501947798}
   - component: {fileID: 501947797}
   - component: {fileID: 501947799}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Archer Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7595,7 +7625,7 @@ GameObject:
   - component: {fileID: 666251936}
   - component: {fileID: 666251935}
   - component: {fileID: 666251937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Priest Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10170,7 +10200,8 @@ GameObject:
   - component: {fileID: 909662786}
   - component: {fileID: 909662788}
   - component: {fileID: 909662789}
-  m_Layer: 0
+  - component: {fileID: 909662790}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10339,6 +10370,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &909662790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909662782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
 --- !u!1 &911369437
 GameObject:
   m_ObjectHideFlags: 0
@@ -11944,7 +11989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1076635394}
   - component: {fileID: 1076635395}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch Vil. 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12297,7 +12342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1083221132}
   - component: {fileID: 1083221133}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Archer 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14032,6 +14077,36 @@ Transform:
   m_Father: {fileID: 2025302709}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1285804745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285804746}
+  m_Layer: 0
+  m_Name: AttackPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1285804746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285804745}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.427, y: -0.025, z: -4.6400356}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1764150145}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1288996447
 GameObject:
   m_ObjectHideFlags: 0
@@ -14125,7 +14200,7 @@ GameObject:
   - component: {fileID: 1290799692}
   - component: {fileID: 1290799691}
   - component: {fileID: 1290799693}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch Vil. Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14240,7 +14315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303677102}
   - component: {fileID: 1303677103}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch Vil. 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15070,7 +15145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1369953313}
   - component: {fileID: 1369953312}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Archer 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15234,7 +15309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382931164}
   - component: {fileID: 1382931165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Archer 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15910,7 +15985,7 @@ GameObject:
   - component: {fileID: 1441125957}
   - component: {fileID: 1441125956}
   - component: {fileID: 1441125958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Church Priest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16268,7 +16343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465740809}
   - component: {fileID: 1465740810}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Archer 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16514,7 +16589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498071545}
   - component: {fileID: 1498071546}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch Vil. 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16678,7 +16753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1510012301}
   - component: {fileID: 1510012302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Archer 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16765,7 +16840,8 @@ GameObject:
   - component: {fileID: 1515231560}
   - component: {fileID: 1515231562}
   - component: {fileID: 1515231563}
-  m_Layer: 0
+  - component: {fileID: 1515231564}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16934,6 +17010,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1515231564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515231556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
 --- !u!1 &1517670327
 GameObject:
   m_ObjectHideFlags: 0
@@ -17153,7 +17243,8 @@ GameObject:
   - component: {fileID: 1531162672}
   - component: {fileID: 1531162674}
   - component: {fileID: 1531162675}
-  m_Layer: 0
+  - component: {fileID: 1531162676}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17322,6 +17413,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1531162676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531162668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
 --- !u!1 &1534862064
 GameObject:
   m_ObjectHideFlags: 0
@@ -17332,7 +17437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1534862066}
   - component: {fileID: 1534862065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17606,7 +17711,8 @@ GameObject:
   - component: {fileID: 1554900680}
   - component: {fileID: 1554900682}
   - component: {fileID: 1554900683}
-  m_Layer: 0
+  - component: {fileID: 1554900684}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17775,6 +17881,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1554900684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554900676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
 --- !u!1 &1559048344
 GameObject:
   m_ObjectHideFlags: 0
@@ -18588,7 +18708,7 @@ GameObject:
   - component: {fileID: 1644839520}
   - component: {fileID: 1644839522}
   - component: {fileID: 1644839521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pitchfork Vil. Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84597,7 +84717,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.264, y: -2.387, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1285804746}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84662,6 +84783,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3.5
   anim: {fileID: 1764150149}
+  attackPos: {fileID: 1285804746}
+  attackRange: 0.36
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 64
+  damage: 10
 --- !u!95 &1764150149
 Animator:
   serializedVersion: 3
@@ -85063,7 +85190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811949628}
   - component: {fileID: 1811949629}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Archer 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85150,7 +85277,8 @@ GameObject:
   - component: {fileID: 1814899042}
   - component: {fileID: 1814899044}
   - component: {fileID: 1814899045}
-  m_Layer: 0
+  - component: {fileID: 1814899046}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85319,6 +85447,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1814899046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814899038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
 --- !u!1 &1827662188
 GameObject:
   m_ObjectHideFlags: 0
@@ -85657,7 +85799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846266784}
   - component: {fileID: 1846266785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bridge Priest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86072,7 +86214,8 @@ GameObject:
   - component: {fileID: 1870735513}
   - component: {fileID: 1870735515}
   - component: {fileID: 1870735516}
-  m_Layer: 0
+  - component: {fileID: 1870735517}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86241,6 +86384,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1870735517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870735509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
 --- !u!1 &1880703570
 GameObject:
   m_ObjectHideFlags: 0
@@ -86333,7 +86490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884858188}
   - component: {fileID: 1884858189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch Vil. 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86824,11 +86981,13 @@ GameObject:
   - component: {fileID: 1941730376}
   - component: {fileID: 1941730375}
   - component: {fileID: 1941730377}
+  - component: {fileID: 1941730383}
   - component: {fileID: 1941730379}
+  - component: {fileID: 1941730381}
   - component: {fileID: 1941730378}
   - component: {fileID: 1941730380}
-  - component: {fileID: 1941730381}
-  m_Layer: 0
+  - component: {fileID: 1941730382}
+  m_Layer: 6
   m_Name: Pitchfork Vil. (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86997,6 +87156,46 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1941730382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941730374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ae7f4618856b44c98ee1126b62a321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  anim: {fileID: 0}
+--- !u!61 &1941730383
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941730374}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004730776, y: -0.05449429}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.39, y: 0.52}
+    newSize: {x: 0.39, y: 0.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16440603, y: 0.41474926}
+  m_EdgeRadius: 0
 --- !u!4 &1967750900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3226521009676847262, guid: c13263f1f05170f4e849875cee5c46d0, type: 3}
@@ -87592,7 +87791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2041418730}
   - component: {fileID: 2041418731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torch Vil. 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

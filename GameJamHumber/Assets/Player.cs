@@ -7,13 +7,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed;
     private Rigidbody2D body;
     public Animator anim;
+
     private bool grounded;
     private bool FacingRight = false;
 
     //Attack Variables
     private bool attack = false;
-    private float timeBtwAttack;
-    private float startTimeBtwAttack;
     public Transform attackPos;
     public float attackRange;
     public LayerMask whatIsEnemies;
@@ -52,8 +51,6 @@ public class Player : MonoBehaviour
 
 
         //Attack Code
-        if(timeBtwAttack <= 0)
-        {
             //Attack enemy
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -65,12 +62,6 @@ public class Player : MonoBehaviour
                 }
             }
 
-            timeBtwAttack = startTimeBtwAttack;
-        }
-        else
-        {
-            timeBtwAttack -= Time.deltaTime;
-        }
     }//End of update
 
     //Controls jumping for player
