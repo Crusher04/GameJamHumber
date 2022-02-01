@@ -21,8 +21,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
-            // anim.SetTrigger("Death");
-            Instantiate(deathEffect, transform.position, Quaternion.identity);
+            anim.SetTrigger("Death");
             destroyDelay -= Time.deltaTime;
             GetComponent<EnemyTracking>().enabled = false;
             
