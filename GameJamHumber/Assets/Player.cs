@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     public Transform attackPos;
     public float attackRange;
     public LayerMask whatIsEnemies;
-    public int damage; 
+    public int damage;
+    Vector3 mousePos;
 
     private void Start()
     {
@@ -51,16 +52,19 @@ public class Player : MonoBehaviour
 
 
         //Attack Code
-            //Attack enemy
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+        //Attack enemy
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+           // mousePos.z = transform.position.z;
+
+            anim.SetTrigger("attack");
+            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+            for(int i = 0; i < enemiesToDamage.Length; i++)
             {
-                anim.SetTrigger("attack");
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                for(int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
-                }
+                enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
             }
+        }
 
     }//End of update
 
