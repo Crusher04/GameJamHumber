@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     private Animation deathEffect;
     //public Transform Player;
     private Rigidbody2D body;
+    public GameObject blood;
+    private GameObject player;
+    Vector3 deathPos;
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +22,13 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetBool("Attack", false);
         body = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        deathPos = this.gameObject.transform.position;
 
-        if(GetComponent<torchguyAttack>() != null)
+        if (GetComponent<torchguyAttack>() != null)
         {
             anim.Play("torchguy_idle");
+
         }
 
     }
@@ -37,7 +43,7 @@ public class Enemy : MonoBehaviour
             destroyDelay -= Time.deltaTime;
             
 
-            if(GetComponent<EnemyTracking>() != null)
+            if (GetComponent<EnemyTracking>() != null)
             {
                 GetComponent<EnemyTracking>().enabled = false;
             }
@@ -50,7 +56,9 @@ public class Enemy : MonoBehaviour
             if (destroyDelay <= 0)
             {
                 Debug.Log("DestroyTime = " + destroyDelay);
-                Destroy(gameObject);
+                Instantiate(blood, deathPos, Quaternion.identity);
+                Death();
+                
             }
         }
     }
@@ -62,13 +70,8 @@ public class Enemy : MonoBehaviour
     }
 
     public void Death()
-    { 
-        Destroy(this);
-        destroyDelay -= Time.deltaTime*2;
-        if (destroyDelay <= 0)
-        {
-            Debug.Log("DestroyTime = " + destroyDelay);
-            Destroy(gameObject);
-        }
+    {
+        Destroy(gameObject);
+ 
     }
 }//End of class
