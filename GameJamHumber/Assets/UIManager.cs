@@ -13,7 +13,8 @@ public class UIManager : MonoBehaviour
     public bool hit = false;
     public float timeRemaining = 179;
     public bool timerIsRunning = true;
-
+    public GameObject deathScene;
+    public GameObject SoundManager;
     // Draws Health to screen at the start of the game
     void Start()
     {
@@ -41,7 +42,10 @@ public class UIManager : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
-            }
+                deathScene.SetActive(true);
+                Time.timeScale = 0f;
+            SoundManager.SetActive(false);
+        }
     }
 
     // Function that adds blood to total blood when it is picked up
