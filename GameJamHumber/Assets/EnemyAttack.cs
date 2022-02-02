@@ -39,6 +39,11 @@ public class EnemyAttack : MonoBehaviour
         attack();
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        attack();
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         anim.SetBool("Attack", false);
