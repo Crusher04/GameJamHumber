@@ -7,10 +7,10 @@ public class Enemy : MonoBehaviour
 
     //Variables
     public int health;
-    public Animator anim;
+    private Animator anim;
     public float destroyDelay = .7f;
-    public Animation deathEffect;
-    public Transform Player;
+    private Animation deathEffect;
+    //public Transform Player;
     private Rigidbody2D body;
 
     // Start is called before the first frame update

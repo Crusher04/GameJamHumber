@@ -12,7 +12,7 @@ public class EnemyAttack : MonoBehaviour
     public float timeBtwAttacks;
     public float startAttackTimer;
     private bool attacked = false;
-
+    bool firstAttack = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +51,18 @@ public class EnemyAttack : MonoBehaviour
 
     private void attack()
     {
+        
+        if(firstAttack)
+        {
+            firstAttack = false;
+            anim.SetBool("Attack", true);
+            Collider2D[] playersToD = Physics2D.OverlapCircleAll(attackPos.position, attackRange, isPlayer);
+            for (int i = 0; i < playersToD.Length; i++)
+            {
+                playersToD[i].GetComponent<Health>().TakeDamage(damage);
+            }
+        }
+
         if(timeBtwAttacks <= 0)
         {
             anim.SetBool("Attack", true);

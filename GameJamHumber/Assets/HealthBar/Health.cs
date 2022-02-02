@@ -9,11 +9,12 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
-
+    public GameObject deathScene;
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
+    float freezeDelay = .6f;
 
     [Header("Components")]
     [SerializeField] private Behaviour[] components;
@@ -46,6 +47,7 @@ public class Health : MonoBehaviour
                     component.enabled = false;
 
                 dead = true;
+                gameover();
             }
         }
     }
@@ -66,5 +68,21 @@ public class Health : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(10, 11, false);
         invulnerable = false;
+    }
+
+    private void gameover()
+    { 
+        deathScene.SetActive(true);
+        
+    }
+
+    private void Update()
+    {
+        if(dead)
+        {
+            freezeDelay -= Time.deltaTime;
+            if (freezeDelay <= 0)
+                Time.timeScale = 0f;
+        }
     }
 }
