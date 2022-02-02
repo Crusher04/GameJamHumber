@@ -81,6 +81,11 @@ public class Player : MonoBehaviour
             grounded = true;
     }
 
+    public void TakeDamage (float damage)
+    {
+
+    }
+
     void Flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;
