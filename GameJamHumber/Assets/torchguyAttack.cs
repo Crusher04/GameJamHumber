@@ -34,30 +34,28 @@ public class torchguyAttack : MonoBehaviour
                 Instantiate(torch, transform.position, transform.rotation);
                 timeBtwAttacks = startAttackTimer;
             }
-            else
-            {
-                anim.SetBool("Attack", false);
-            }
+            
         }
 
-        if (target.transform.position.x >= 0.01f && !FacingRight) //body.velocity.x < 0 && FacingRight
+        if (Vector3.Distance(target.transform.position, transform.position) < 20)
         {
-            Flip();
+
+            
+            if (target.transform.position.x > transform.position.x && !FacingRight) //if the target is to the right of enemy and the enemy is not facing right
+                Flip();
+            if (target.transform.position.x < transform.position.x && FacingRight)
+                Flip();
         }
 
-        if (target.transform.position.x <= 0.01f && FacingRight) //body.velocity.x > 0 && !FacingRight
-        {
-            Flip();
-        };
     }
+
 
     void Flip()
     {
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
         FacingRight = !FacingRight;
-
     }
 
     private void OnDrawGizmosSelected()

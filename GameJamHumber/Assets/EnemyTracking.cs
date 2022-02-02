@@ -32,7 +32,7 @@ public class EnemyTracking : MonoBehaviour
         if (dist < range)
         {
 
-            //Track player
+            /*//Track player
             if (transform.position.x < Player.position.x)
             {
                 body.velocity = new Vector2(hSpeed, 0);
@@ -42,18 +42,18 @@ public class EnemyTracking : MonoBehaviour
             {
                 body.velocity = new Vector2(-hSpeed, 0);
                 
-            }
+            }*/
 
-            //Flip sprite to face player
-            if (body.velocity.x >= 0.01f && !FacingRight) //body.velocity.x < 0 && FacingRight
+            if (Vector3.Distance(Player.position, transform.position) < 20)
             {
-                Flip();
-            }
 
-            if (body.velocity.x <= 0.01f && FacingRight) //body.velocity.x > 0 && !FacingRight
-            {
-                Flip();
-            };
+                transform.position = Vector2.MoveTowards(transform.position, Player.position, hSpeed * Time.deltaTime);
+                if (Player.position.x > transform.position.x && !FacingRight) //if the target is to the right of enemy and the enemy is not facing right
+                    Flip();
+                if (Player.position.x < transform.position.x && FacingRight)
+                    Flip();
+            }
+           
 
             //Disabling Patrolling..
             GetComponent<EnemyPatrol>().enabled = false;
@@ -64,10 +64,9 @@ public class EnemyTracking : MonoBehaviour
 
     void Flip()
     {
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
         FacingRight = !FacingRight;
-
     }
 }//End of class
