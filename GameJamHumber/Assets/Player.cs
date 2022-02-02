@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     private bool grounded;
     private bool FacingRight = false;
 
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip hurtSound;
     //Attack Variables
     private bool attack = false;
     public Transform attackPos;
@@ -34,8 +37,10 @@ public class Player : MonoBehaviour
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
         //Jump Code
+        
         if (Input.GetKey(KeyCode.Space) && grounded)
             jump();
+        
 
         anim.SetBool("run", horizontalInput != 0);
         anim.SetBool("grounded", grounded);
@@ -58,13 +63,16 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-           // mousePos.z = transform.position.z;
-
+            // mousePos.z = transform.position.z;
+            SoundManager.instance.PlaySound(attackSound);
+            
             anim.SetTrigger("attack");
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
             for(int i = 0; i < enemiesToDamage.Length; i++)
             {
                 enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                SoundManager.instance.PlaySound(attackSound);
+                SoundManager.instance.PlaySound(hurtSound);
             }
         }
 
@@ -72,9 +80,12 @@ public class Player : MonoBehaviour
 
     //Controls jumping for player
     private void jump()
+        
     {
         body.velocity = new Vector2(body.velocity.x, speed + 2f);
         grounded = false;
+        SoundManager.instance.PlaySound(jumpSound);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

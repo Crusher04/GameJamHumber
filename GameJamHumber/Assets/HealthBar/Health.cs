@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
+    [SerializeField] private AudioClip playerHurtSound;
     public GameObject deathScene;
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
@@ -30,6 +31,7 @@ public class Health : MonoBehaviour
     {
         if (invulnerable) return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        SoundManager.instance.PlaySound(playerHurtSound);
 
         if (currentHealth > 0)
         {

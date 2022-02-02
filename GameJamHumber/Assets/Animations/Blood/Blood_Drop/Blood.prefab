@@ -153,6 +153,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   coll: {fileID: 9170869425352602627}
   trigger: {fileID: 8260526467741157361}
+  pickupSound: {fileID: 8300000, guid: a41c27869836f4d47b0aece4debacfa7, type: 3}
 --- !u!50 &7216220631714679860
 Rigidbody2D:
   serializedVersion: 4
