@@ -20,11 +20,13 @@ public class Torch : MonoBehaviour
     private float baseY;
     private float height;
     private bool toss = true;
+    public LayerMask whatIsHost;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Enemy");
+       
+        player = GameObject.FindGameObjectWithTag("torchguy");
         target = GameObject.FindGameObjectWithTag("Player");
     }
 

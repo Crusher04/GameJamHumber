@@ -8,6 +8,7 @@ TagManager:
   - switch
   - Enemy
   - torch
+  - torchguy
   layers:
   - Default
   - TransparentFX
