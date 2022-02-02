@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class CreditsExit : MonoBehaviour
 {
-        private float timer = 15;
+        public float timer = 15;
+        private AudioSource soundtrack;
+        private float fadeTime = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        soundtrack = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,11 +23,28 @@ public class CreditsExit : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-2);
+            //AudioSource.Destroy();
         }
 
         if(timer <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
+
+        if(timer < 15)
+        {
+            StartCoroutine(FadeOut(soundtrack, fadeTime));
+        }
+    }
+
+    public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    {
+        float startVolume = audioSource.volume;
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+            yield return null;
+        }
+        audioSource.Stop();
     }
 }
