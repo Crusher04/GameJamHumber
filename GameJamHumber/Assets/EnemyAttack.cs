@@ -13,6 +13,7 @@ public class EnemyAttack : MonoBehaviour
     public float startAttackTimer;
     private bool attacked = false;
     bool firstAttack = true;
+
     // Start is called before the first frame update
     void Start()
     {
