@@ -21,7 +21,6 @@ public class Torch : MonoBehaviour
     private float height;
     private bool toss = true;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -51,12 +50,17 @@ public class Torch : MonoBehaviour
         if (movePosition == target.transform.position)
         {
             Destroy(gameObject);
-            target.GetComponent<Health>().TakeDamage(damage);
+            hit();
         }
         else if(movePosition.x == targetX)
         {
             Destroy(gameObject);
         }
+    }
+
+    private void hit()
+    {
+        target.GetComponent<Health>().TakeDamage(damage);
     }
 
     public static Quaternion LookAtTarget(Vector2 r)
@@ -68,5 +72,6 @@ public class Torch : MonoBehaviour
     {
         playerX = player.transform.position.x;
         targetX = target.transform.position.x;
-    }
+    } 
+
 }

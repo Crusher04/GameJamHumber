@@ -7,6 +7,7 @@ TagManager:
   - ground
   - switch
   - Enemy
+  - torch
   layers:
   - Default
   - TransparentFX

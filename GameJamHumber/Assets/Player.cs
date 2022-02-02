@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public int damage;
     Vector3 mousePos;
 
+    private float torchDamage = 1f;
+
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -79,11 +81,9 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground")
             grounded = true;
-    }
 
-    public void TakeDamage (float damage)
-    {
-
+        if (collision.gameObject.tag == "torch")
+            GetComponent<Health>().TakeDamage(1);
     }
 
     void Flip()
