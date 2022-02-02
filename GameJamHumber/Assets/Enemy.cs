@@ -19,6 +19,12 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetBool("Attack", false);
         body = GetComponent<Rigidbody2D>();
+
+        if(GetComponent<torchguyAttack>() != null)
+        {
+            anim.Play("torchguy_idle");
+        }
+
     }
 
     // Update is called once per frame
@@ -26,9 +32,20 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            anim.SetBool("Attack", false);
             anim.SetTrigger("Death");
             destroyDelay -= Time.deltaTime;
-            GetComponent<EnemyTracking>().enabled = false;
+            
+
+            if(GetComponent<EnemyTracking>() != null)
+            {
+                GetComponent<EnemyTracking>().enabled = false;
+            }
+           
+            if (GetComponent<torchguyAttack>() != null)
+            {
+                GetComponent<torchguyAttack>().enabled = false;
+            }
 
             if (destroyDelay <= 0)
             {

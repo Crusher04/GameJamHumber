@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
             grounded = true;
 
         if (collision.gameObject.tag == "torch")
-            GetComponent<Health>().TakeDamage(1);
+            GetComponent<Health>().TakeDamage(.25f);
     }
 
     void Flip()

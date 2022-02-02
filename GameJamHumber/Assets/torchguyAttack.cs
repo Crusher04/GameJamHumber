@@ -10,6 +10,7 @@ public class torchguyAttack : MonoBehaviour
     public float range;
     public float timeBtwAttacks;
     public float startAttackTimer;
+    private bool FacingRight = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +30,34 @@ public class torchguyAttack : MonoBehaviour
         {
             if (timeBtwAttacks <= 0)
             {
-                anim.SetTrigger("Attack");
+                anim.SetBool("Attack", true);
                 Instantiate(torch, transform.position, transform.rotation);
                 timeBtwAttacks = startAttackTimer;
             }
+            else
+            {
+                anim.SetBool("Attack", false);
+            }
         }
+
+        if (target.transform.position.x >= 0.01f && !FacingRight) //body.velocity.x < 0 && FacingRight
+        {
+            Flip();
+        }
+
+        if (target.transform.position.x <= 0.01f && FacingRight) //body.velocity.x > 0 && !FacingRight
+        {
+            Flip();
+        };
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+        FacingRight = !FacingRight;
+
     }
 
     private void OnDrawGizmosSelected()
