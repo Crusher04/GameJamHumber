@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class PriestAttack : MonoBehaviour
 {
     // Variables
     public Transform Player;
     public Collider2D col;
     public Rigidbody2D body;
-    public TypeEnemy enemy;
-    //public PlayerDeath playerDeath;
-    //public UIManager healthManager;
-    //public TypeEnemy enemy;
+    public float range;
 
     // Get body component
     void Start()
@@ -24,10 +21,11 @@ public class EnemyAttack : MonoBehaviour
     void Update()
     {
         float dist = Vector2.Distance(transform.position, Player.position);
-        if (dist > enemy.range)
+        if (dist > range)
         {
             col.enabled = false;
             body.isKinematic = false;
+            GetComponent<EnemyMovement>().enabled = true;
         }
         else Active();
     }
@@ -35,5 +33,10 @@ public class EnemyAttack : MonoBehaviour
     {
         col.enabled = true;
         body.isKinematic = true;
+        GetComponent<EnemyMovement>().enabled = false;
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 }
