@@ -19,20 +19,23 @@ public class EnemyAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         anim.SetBool("Attack", false);
+        timeBtwAttacks = startAttackTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(attacked)
-        {
-            timeBtwAttacks -= Time.deltaTime;
-        }
-        
-        if(timeBtwAttacks <= 0)
-        {
-            attacked = false;
-        }
+        /* if(attacked)
+         {
+             timeBtwAttacks -= Time.deltaTime;
+         }
+
+         if(timeBtwAttacks <= 0)
+         {
+             attacked = false;
+         }*/
+
+        timeBtwAttacks -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,17 +55,30 @@ public class EnemyAttack : MonoBehaviour
 
     private void attack()
     {
-        
-        if(firstAttack)
-        {
-            firstAttack = false;
-            anim.SetBool("Attack", true);
-            Collider2D[] playersToD = Physics2D.OverlapCircleAll(attackPos.position, attackRange, isPlayer);
-            for (int i = 0; i < playersToD.Length; i++)
-            {
-                playersToD[i].GetComponent<Health>().TakeDamage(damage);
-            }
-        }
+
+        /* if(firstAttack)
+         {
+             firstAttack = false;
+             anim.SetBool("Attack", true);
+             Collider2D[] playersToD = Physics2D.OverlapCircleAll(attackPos.position, attackRange, isPlayer);
+             for (int i = 0; i < playersToD.Length; i++)
+             {
+                 playersToD[i].GetComponent<Health>().TakeDamage(damage);
+             }
+         }
+
+         if(timeBtwAttacks <= 0)
+         {
+             anim.SetBool("Attack", true);
+             Collider2D[] playersToD = Physics2D.OverlapCircleAll(attackPos.position, attackRange, isPlayer);
+             for (int i = 0; i < playersToD.Length; i++)
+             {
+                 playersToD[i].GetComponent<Health>().TakeDamage(damage);
+             }
+
+             timeBtwAttacks = startAttackTimer;
+             attacked = true;
+         }*/
 
         if(timeBtwAttacks <= 0)
         {
@@ -72,13 +88,9 @@ public class EnemyAttack : MonoBehaviour
             {
                 playersToD[i].GetComponent<Health>().TakeDamage(damage);
             }
-
             timeBtwAttacks = startAttackTimer;
-            attacked = true;
         }
 
-
-        
     }
 
     private void OnDrawGizmosSelected()
