@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 162260498519953250}
   - component: {fileID: 53315316637941626}
+  - component: {fileID: 9162032300055799643}
   m_Layer: 0
   m_Name: firball 1
   m_TagString: Untagged
@@ -82,3 +83,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9162032300055799643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164544893849646276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95ec48ff3a2e9b94d8b018de1534d608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  target: {fileID: 0}
+  speed: 6.5
+  damage: 1
+  movePosition: {x: 0, y: 0, z: 0}
+  whatIsHost:
+    serializedVersion: 2
+    m_Bits: 0

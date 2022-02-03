@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour
+public class Fireball1 : MonoBehaviour
 {
 
     public GameObject player;
@@ -26,7 +26,7 @@ public class Fireball : MonoBehaviour
     void Start()
     {
        
-        player = GameObject.FindGameObjectWithTag("Archer");
+        player = GameObject.FindGameObjectWithTag("Archer1");
         target = GameObject.FindGameObjectWithTag("Player");
     }
 

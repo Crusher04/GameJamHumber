@@ -5,7 +5,7 @@ using UnityEngine;
 public class WizardAttack : MonoBehaviour
 {
     private GameObject target;
-    public GameObject Fireball;
+    public GameObject fireball;
     private Animator anim;
     public Transform shotPoint;
     public float range;
@@ -32,7 +32,7 @@ public class WizardAttack : MonoBehaviour
             if (timeBtwAttacks <= 0)
             {
                 anim.SetBool("PlayerSeen", true);
-                Instantiate(Fireball, shotPoint.position, shotPoint.rotation);
+                Instantiate(fireball, shotPoint.position, shotPoint.rotation);
                 timeBtwAttacks = startAttackTimer;
             }
             

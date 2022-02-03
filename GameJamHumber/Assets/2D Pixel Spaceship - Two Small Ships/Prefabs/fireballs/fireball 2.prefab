@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7779471539027773480, guid: 1e984a79589b4b141a58ba1e13d5b1c2, type: 3}
       propertyPath: m_Name
-      value: fireball-red-tail-big 1
+      value: fireball 2
       objectReference: {fileID: 0}
     - target: {fileID: 7781902949086409614, guid: 1e984a79589b4b141a58ba1e13d5b1c2, type: 3}
       propertyPath: m_RootOrder
@@ -55,5 +55,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1628257173190155191, guid: 1e984a79589b4b141a58ba1e13d5b1c2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e984a79589b4b141a58ba1e13d5b1c2, type: 3}
