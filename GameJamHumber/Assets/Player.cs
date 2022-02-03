@@ -17,10 +17,13 @@ public class Player : MonoBehaviour
     public float attackRange;
     public LayerMask whatIsEnemies;
     public int damage;
+    public float timeBtwAttacks;
+    public float startAttackTimer;
 
     [SerializeField] private AudioClip attackSound;
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip hurtSound;
+
     private float torchDamage = 1f;
 
     private void Start()
