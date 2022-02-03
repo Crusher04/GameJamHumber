@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     public float attackRange;
     public LayerMask whatIsEnemies;
     public int damage;
-    Vector3 mousePos;
     public AudioClip grass;
     public AudioClip wood;
     public AudioClip stone;
@@ -55,13 +54,9 @@ public class Player : MonoBehaviour
             Flip();
         }
 
-
-        //Attack Code
         //Attack enemy
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-           // mousePos.z = transform.position.z;
 
             anim.SetTrigger("attack");
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
