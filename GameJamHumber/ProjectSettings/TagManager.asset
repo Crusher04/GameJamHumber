@@ -10,6 +10,12 @@ TagManager:
   - torch
   - torchguy
   - Archer
+  - Archer1
+  - Archer2
+  - Archer3
+  - Archer4
+  - Archer5
+  - Archer6
   layers:
   - Default
   - TransparentFX
