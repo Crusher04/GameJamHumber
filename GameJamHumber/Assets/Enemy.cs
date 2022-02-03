@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
 
     //Variables
+
     public int health;
     private Animator anim;
     public float destroyDelay = .7f;
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour
     public GameObject blood;
     private GameObject player;
     Vector3 deathPos;
+    [SerializeField] private AudioClip hurtSound; 
 
     // Start is called before the first frame update
     void Start()
@@ -65,8 +67,11 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        SoundManager.instance.PlaySound(hurtSound);
         health -= damage;
         Debug.Log("DAMAGE TAKEN, Health left = " + health);
+        
+        
     }
 
     public void Death()
