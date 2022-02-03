@@ -53,7 +53,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 164544893849646276, guid: c0d9378e61bd94847b6e642b266fefd6, type: 3}
       propertyPath: m_Name
-      value: fireball-red-tail-big 1
+      value: fireball 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6569023066347900371, guid: c0d9378e61bd94847b6e642b266fefd6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c0d9378e61bd94847b6e642b266fefd6, type: 3}
+--- !u!1 &7779471539027773480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 164544893849646276, guid: c0d9378e61bd94847b6e642b266fefd6, type: 3}
+  m_PrefabInstance: {fileID: 7619712956850257132}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8772295406986929217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7779471539027773480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc40ab126f653124a8cf87a6f35b3b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
