@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - torch
   - torchguy
+  - Archer
   layers:
   - Default
   - TransparentFX
