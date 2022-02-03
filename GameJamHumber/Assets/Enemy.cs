@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public GameObject blood;
     private GameObject player;
     Vector3 deathPos;
+    public AudioSource hurtSound;
+    public AudioSource hurtSound2;
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +69,14 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
         Debug.Log("DAMAGE TAKEN, Health left = " + health);
+        float r = Random.Range(1,4);
+
+        if (r < 3 )
+        {
+            hurtSound.Play();
+        }
+        else
+            hurtSound2.Play();
     }
 
     public void Death()
