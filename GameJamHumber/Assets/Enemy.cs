@@ -69,9 +69,9 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
         Debug.Log("DAMAGE TAKEN, Health left = " + health);
-        int r = Random.Range(0, 1);
+        float r = Random.Range(1,4);
 
-        if (r == 1)
+        if (r < 3 )
         {
             hurtSound.Play();
         }

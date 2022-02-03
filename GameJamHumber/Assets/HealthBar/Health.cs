@@ -20,6 +20,8 @@ public class Health : MonoBehaviour
     [SerializeField] private Behaviour[] components;
     private bool invulnerable;
 
+    public AudioSource healSound;
+
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -54,6 +56,7 @@ public class Health : MonoBehaviour
     public void AddHealth(float _value)
     {
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+        healSound.Play();
     }
     private IEnumerator Invunerability()
     {
