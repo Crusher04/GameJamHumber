@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public float timeBtwAttacks;
     public float startAttackTimer;
 
-    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioSource attackSound;
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip hurtSound;
 
@@ -59,8 +59,8 @@ public class Player : MonoBehaviour
 
         //Attack enemy
         if (Input.GetKeyDown(KeyCode.Mouse0))
-        {   
-
+        {
+            attackSound.Play();
             anim.SetTrigger("attack");
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
             for(int i = 0; i < enemiesToDamage.Length; i++)
