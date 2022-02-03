@@ -58,3 +58,28 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1628257173190155191, guid: 1e984a79589b4b141a58ba1e13d5b1c2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e984a79589b4b141a58ba1e13d5b1c2, type: 3}
+--- !u!1 &5976629919182607407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779471539027773480, guid: 1e984a79589b4b141a58ba1e13d5b1c2, type: 3}
+  m_PrefabInstance: {fileID: 4109390741239421959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7224031588763967867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5976629919182607407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 876846a446f3a3d49b56ff8df70e4a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  target: {fileID: 0}
+  speed: 6.5
+  damage: 1
+  movePosition: {x: 0, y: 0, z: 0}
+  whatIsHost:
+    serializedVersion: 2
+    m_Bits: 0
