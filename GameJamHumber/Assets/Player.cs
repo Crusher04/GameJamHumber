@@ -17,10 +17,10 @@ public class Player : MonoBehaviour
     public float attackRange;
     public LayerMask whatIsEnemies;
     public int damage;
-    public AudioClip grass;
-    public AudioClip wood;
-    public AudioClip stone;
 
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip hurtSound;
     private float torchDamage = 1f;
 
     private void Start()
@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
         //Attack enemy
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-
+            
             anim.SetTrigger("attack");
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
             for(int i = 0; i < enemiesToDamage.Length; i++)
