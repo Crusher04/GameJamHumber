@@ -17,8 +17,10 @@ public class Player : MonoBehaviour
     public float attackRange;
     public LayerMask whatIsEnemies;
     public int damage;
-    Vector3 mousePos;
 
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip hurtSound;
     private float torchDamage = 1f;
 
     private void Start()
@@ -52,14 +54,10 @@ public class Player : MonoBehaviour
             Flip();
         }
 
-
-        //Attack Code
         //Attack enemy
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-           // mousePos.z = transform.position.z;
-
+            
             anim.SetTrigger("attack");
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
             for(int i = 0; i < enemiesToDamage.Length; i++)
