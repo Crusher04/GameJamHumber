@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 987885296404814591, guid: 8fe8cd74c6581274f865a62c089873d4, type: 3}
+      propertyPath: m_Name
+      value: fireball 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7576603820060488842, guid: 8fe8cd74c6581274f865a62c089873d4, type: 3}
       propertyPath: m_Name
       value: fireball-red-tail-big
@@ -55,5 +59,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -757673348290913279, guid: 8fe8cd74c6581274f865a62c089873d4, type: 3}
+    - {fileID: 8719874084646668266, guid: 8fe8cd74c6581274f865a62c089873d4, type: 3}
+    - {fileID: 5237406169510618125, guid: 8fe8cd74c6581274f865a62c089873d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8fe8cd74c6581274f865a62c089873d4, type: 3}
+--- !u!1 &7248313053986826081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 987885296404814591, guid: 8fe8cd74c6581274f865a62c089873d4, type: 3}
+  m_PrefabInstance: {fileID: 7575760599972085150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4063009801306502826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248313053986826081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132c02e337c36d345aef730af2b24420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  target: {fileID: 0}
+  speed: 10
+  damage: 1
+  movePosition: {x: 0, y: 0, z: 0}
+  whatIsHost:
+    serializedVersion: 2
+    m_Bits: 0
