@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     public LayerMask whatIsEnemies;
     public int damage;
     Vector3 mousePos;
+    public AudioClip grass;
+    public AudioClip wood;
+    public AudioClip stone;
 
     private float torchDamage = 1f;
 
