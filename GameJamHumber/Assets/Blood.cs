@@ -9,12 +9,12 @@ public class Blood : MonoBehaviour
     private bool falling = true;
     public Collider2D coll;
     public Collider2D trigger;
-    [SerializeField] private AudioClip pickupSound; 
+    [SerializeField] private AudioSource pickupSound; 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        body = GetComponent<Rigidbody2D>(); ;
+        body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class Blood : MonoBehaviour
             coll.enabled = true;
             Player.GetComponent<Health>().AddHealth(.5f);
             Destroy(gameObject);
-            SoundManager.instance.PlaySound(pickupSound);
+            pickupSound.Play();
         }
         else if(collision.gameObject.tag != "ground")
         {

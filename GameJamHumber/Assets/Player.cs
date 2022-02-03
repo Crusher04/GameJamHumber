@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private AudioClip attackSound;
     [SerializeField] private AudioClip jumpSound;
-    [SerializeField] private AudioClip hurtSound;
     //Attack Variables
     private bool attack = false;
     public Transform attackPos;
@@ -21,7 +20,8 @@ public class Player : MonoBehaviour
     public LayerMask whatIsEnemies;
     public int damage;
     Vector3 mousePos;
-
+    public float timeBtwAttacks;
+    public float startAttackTimer;
     private float torchDamage = 1f;
 
     private void Start()
@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         //Movement Code
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
-
+        timeBtwAttacks -= Time.deltaTime;
         //Jump Code
         
         if (Input.GetKey(KeyCode.Space) && grounded)
@@ -62,18 +62,21 @@ public class Player : MonoBehaviour
         //Attack enemy
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            //mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // mousePos.z = transform.position.z;
-            SoundManager.instance.PlaySound(attackSound);
             
-            anim.SetTrigger("attack");
-            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-            for(int i = 0; i < enemiesToDamage.Length; i++)
+            if(timeBtwAttacks <= 0)
             {
-                enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                 SoundManager.instance.PlaySound(attackSound);
-                SoundManager.instance.PlaySound(hurtSound);
+                anim.SetTrigger("attack");
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                for (int i = 0; i < enemiesToDamage.Length; i++)
+                {
+                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    
+                }
+
+                timeBtwAttacks = startAttackTimer;
             }
+           
         }
 
     }//End of update
