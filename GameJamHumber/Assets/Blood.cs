@@ -15,6 +15,7 @@ public class Blood : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         body = GetComponent<Rigidbody2D>();
+        pickupSound.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class Blood : MonoBehaviour
             coll.enabled = true;
             Player.GetComponent<Health>().AddHealth(.5f);
             Destroy(gameObject);
-            pickupSound.Play();
+            pickupSound.Play(0);
         }
         else if(collision.gameObject.tag != "ground")
         {
