@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         //Movement Code
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+        timeBtwAttacks -= Time.deltaTime;
 
         //Jump Code
         if (Input.GetKey(KeyCode.Space) && grounded)
@@ -58,16 +59,22 @@ public class Player : MonoBehaviour
         }
 
         //Attack enemy
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (timeBtwAttacks <= 0)
         {
-            attackSound.Play();
-            anim.SetTrigger("attack");
-            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-            for(int i = 0; i < enemiesToDamage.Length; i++)
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                attackSound.Play();
+                anim.SetTrigger("attack");
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                for (int i = 0; i < enemiesToDamage.Length; i++)
+                {
+                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+
+                }
+                timeBtwAttacks = startAttackTimer;
             }
         }
+           
 
     }//End of update
 
