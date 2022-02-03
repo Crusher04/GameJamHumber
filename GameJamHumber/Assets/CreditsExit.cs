@@ -30,11 +30,6 @@ public class CreditsExit : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
-
-        if(timer < 15)
-        {
-            StartCoroutine(FadeOut(soundtrack, fadeTime));
-        }
     }
 
     public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
